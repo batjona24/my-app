@@ -1,8 +1,47 @@
 .App {
   text-align: center;
 }
+body {
+  background-color: beige;
+  background-image: url("./login.jpg");
+}
+#menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  margin-right: 50px;
+}
+#login {
+  text-align: center;
+  font-size: 18px;
+  display: grid;
+}
+#error_p {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+}
+#username {
+  width: 20%;
+  margin-left: 40%;
+}
+#password {
+  width: 20%;
+  margin-left: 40%;
+}
+button {
+  width: 20%;
+  margin-left: 40%;
+  height: 30px;
+  background-color: green;
+  color: white;
+  border-color: none;
+  margin-top: 20px;
+}
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +74,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
