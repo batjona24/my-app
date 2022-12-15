@@ -73,6 +73,22 @@ table, th, td{
 #container {
   align-content: center;
 }
+.btn-update {
+  background-color: rgb(245, 224, 179);
+  color : brown;
+  border: 2px solid brown;
+  width: 5em;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn-delete {
+  background-color: rgb(245, 224, 179);
+  color: brown;
+  border: 2px solid brown;
+  width: 5em;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 /* #trips{
   display: none;

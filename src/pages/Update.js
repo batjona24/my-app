@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import "../App.css";
 
 export default function Trips(){
+
     const navigate = useNavigate();
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -31,7 +32,7 @@ export default function Trips(){
         <div>
             <Header />
             <h1>TRIPS</h1>
-             <h2>Create a trip now!</h2>
+             <h2>Update your trip!</h2>
                 <form id="trips" onSubmit={onSubmit}>
                 <label>Date</label>
                 <input type="date" name="date" placeholder="Select a date"/>
@@ -41,7 +42,7 @@ export default function Trips(){
                 <input type="number" name="days" placeholder="Select the number of days" min="1"/>
                 <label>Rating</label>
                 <input type="number" name="rating" placeholder="Rating" min="1" max="10"/>
-                <button id="btn" className = "buttons" type="submit" name="submit">Create trip!</button>
+                <button id="btn" className = "buttons" type="submit" name="submit">Update the trip!</button>
                 </form>
             <div id="container">
             </div>

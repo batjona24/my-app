@@ -5,6 +5,13 @@ import '../App.css';
 
 export default function SignUp(){
      const [error,setError] = React.useState(null);
+     React.useEffect(()=>{
+        const checkUser = window.localStorage.getItem("user_id")
+        console.log("check user",checkUser)
+        if(checkUser){
+         navigate("/trips")
+        }
+       },[])
      const navigate = useNavigate();
      const onSubmit = async (event) => {
        event.preventDefault();

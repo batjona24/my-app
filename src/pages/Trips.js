@@ -4,8 +4,15 @@ import { useNavigate } from 'react-router-dom';
 import "../App.css";
 
 export default function Trips(){
-    const [table,setTable] = React.useState([]);
+    const [table, setTable] = React.useState([]);
     const navigate = useNavigate();
+    React.useEffect(()=>{
+        const checkUser = window.localStorage.getItem("user_id")
+        console.log("check user",checkUser)
+        if(!checkUser){
+         navigate("/log-in")
+        }
+       },[])
     const onSubmit = async (event) => {
         event.preventDefault();
         const form = event.target;
@@ -32,16 +39,14 @@ async function showTrips() {
     setTable(data);      
 }   
 
-async function onUpdate() {
-    const button = document.getElementsByClassName("btn_update");
-    const update_id = button.id; 
+async function onUpdate(event) {
+    const update_id = event.currentTarget.id; 
     window.localStorage.setItem("trip_id", update_id);
     navigate('/update');
 }
 
-async function onDelete() {
-    const button = document.getElementsByClassName("btn_update");
-    const delete_id = button.id; 
+async function onDelete(event) {
+    const delete_id = event.currentTarget.id; 
     await fetch(`http://localhost:4000/api/trips/${delete_id}`, {
         method: 'DELETE'
     })
@@ -87,8 +92,8 @@ showTrips();
                             <td>{item.days}</td>
                             <td>{item.rating}</td>
                             <td>{item.userId}</td>
-                            <td><button id = {item.id} className="btn_update" onClick={onUpdate}>Update</button></td>
-                            <td><button id = {item.id} className="btn_update" onClick={onDelete}>Delete</button></td>
+                            <td><button id = {item.id} className="btn-update" onClick={onUpdate}>Update</button></td>
+                            <td><button id = {item.id} className="btn-delete" onClick={onDelete}>Delete</button></td>
                         </tr>
                     ))}
                 </tbody>
