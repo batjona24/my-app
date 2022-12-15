@@ -23,13 +23,12 @@ export default function Trips(){
         })
         const data = await response.json();
         console.log(data);
-        // autoRefresh(2000);
+        
 };
 async function showTrips() {
     const user_id = Number(window.localStorage.getItem("user_id"));
     const response = await fetch(`http://localhost:4000/api/trips/${user_id}`);
     const data = await response.json();
-    // console.log(data);
     setTable(data);      
 }   
 
@@ -49,9 +48,6 @@ async function onDelete() {
     window.alert("Trip deleted!");
 }
 
-// async function autoRefresh( t ) {
-//     setTimeout("location.reload(true);", t);
-// }
 showTrips();
 
     return(
