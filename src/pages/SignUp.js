@@ -36,7 +36,7 @@ export default function SignUp(){
                 <h1>Sign-up form:</h1>
                 <h2>Please enter a username and a password to make the sign-up!</h2>
                 <label htmlFor="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username..." minlength="5" maxlength="12"  required />
+                <input type="text" id="username" name="username" placeholder="Enter your username..." minLength="5" maxLength="12"  required />
                 <label htmlFor="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password..." pattern="(?=.*\d)(?=.*[!?.:]).{5,12}" title="Must contain at least one number and one special character, and 5-12 characters"/> 
                 <p>Your password must contain <strong>at least</strong> a number and a symbol!</p>

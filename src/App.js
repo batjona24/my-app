@@ -4,7 +4,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import SignUp from './pages/SignUp.js';
 import LogIn from './pages/LogIn.js';
 import Trips from './pages/Trips.js';
-
+import Update from './pages/Update.js';
 
 function App() {
  return (

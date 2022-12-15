@@ -1,11 +1,11 @@
 import Header from "../components/Header.js";
 import React from "react";
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import "../App.css";
 
 export default function Trips(){
+    const navigate = useNavigate();
     const onSubmit = async (event) => {
-        const navigate = useNavigate();
         event.preventDefault();
         const form = event.target;
         const formData = new FormData(form);
